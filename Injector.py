@@ -33,7 +33,7 @@ def conn_client():
     listen = socket.socket()
     listen.bind( ( '127.0.0.1', 8088) )
     listen.listen( 0 )
-    print('Esperando o Cliente no IP e Porta: 127.0.0.1:7000')
+    print('Esperando o Cliente no IP e Porta: 127.0.0.1:8088')
     while True:
         cliente, endereco = listen.accept()
         threading.Thread(target = conecta, args = ( cliente, endereco) ).start()
